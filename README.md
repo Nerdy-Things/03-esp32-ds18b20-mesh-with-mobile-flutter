@@ -22,4 +22,4 @@ https://medium.com/@gektor650/smart-home-journey-explore-the-temperature-sensor-
 
 ### Android Screenshot
 
-![iPhone](/images/android.png)
+![iPhone](/images/android.jpg)
