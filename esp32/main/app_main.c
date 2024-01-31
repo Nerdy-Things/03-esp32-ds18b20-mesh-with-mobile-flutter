@@ -43,7 +43,11 @@ static void udp_server_event_handler(void* arg, esp_event_base_t event_base, int
         char *message = (char*)event_data;
         ESP_LOGI(TAG, "Received in main: %s", message);
         if (strncmp(message, UPDATE_MESSAGE, strlen(UPDATE_MESSAGE)) == 0) {
-            send_udp_temperature();
+            for (int i = 1; i <= 5; i++) {
+                send_udp_temperature();
+                // Delay for 1000 milliseconds (1 second)
+                vTaskDelay(1000 / portTICK_PERIOD_MS);
+            }
         }
     }
 }
